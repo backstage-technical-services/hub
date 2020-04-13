@@ -7,6 +7,7 @@ repository and into a central area.
 **Useful Links**
 
 * [Create Issue][new-issue]
+* [How we use labels][label-usage]
 
 ## About the society
 
@@ -35,4 +36,5 @@ See the separate [Contribution Guide][contribution-guide].
 [new-issue]: https://gitlab.com/backstage-technical-services/website/hub/-/issues/new
 [version-history]: ./Version%20History.md
 [contribution-guide]: ./Contributing.md
+[label-usage]: ./Usage%20of%20Labels.md
 
