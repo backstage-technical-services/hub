@@ -19,6 +19,7 @@ Labels should only be applied to tickets, and not merge requests.
 
 ## Colours
 
-TBC
+![Label Colours][label-colours]
 
+[label-colours]: ./Label%20Colours.png
 [scoped-labels]: https://gitlab.com/help/user/project/labels.md#scoped-labels-premium
