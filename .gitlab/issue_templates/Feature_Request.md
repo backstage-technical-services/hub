@@ -14,5 +14,6 @@ Why should this be implemented? How does this benefit members (or the committee)
 
 How time sensitive is this? Low? Medium? High? Very High? If there's a date or event this needs to be done by, please enter that here too.
 
-\label ~triage/needs-scoping
-\label ~type/feature
+\label ~"status::needs-scoping"
+
+\label ~"type::feature"
