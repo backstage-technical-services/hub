@@ -22,5 +22,14 @@ Understanding the drawbacks is just as important as the motivation. Consider:
 * How this would impact the ability to address other issues
 * Any additional costs
 
+## Alternatives
+
+Are there any alternatives to the problem not described here? Why not choose one 
+of these?
+
+## Adoption Strategy
+
+If the RFC is approved, how would we go about adopting or implementing it?
+
 
 \label ~"type::rfc"
