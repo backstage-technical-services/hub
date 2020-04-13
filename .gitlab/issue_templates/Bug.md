@@ -30,5 +30,6 @@ How quickly does this need to be resolved? Is this preventing you or anyone else
 
 Use one of: Low, Medium, High, Very High
 
-\label ~triage/needs-scoping
-\label ~type/bug
+\label ~"status::needs-scoping"
+
+\label ~"type::bug"
