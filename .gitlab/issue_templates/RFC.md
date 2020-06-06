@@ -1,6 +1,7 @@
 # Request for Comments
 
 * Start Date: (YYYY-MM-DD)
+* Target Decision Date: (YYYY-MM-DD)
 * Target Version: (eg, 4.x)
 
 ## Summary
