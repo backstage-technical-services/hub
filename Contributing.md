@@ -25,7 +25,7 @@ Yes, you most definitely can!
 
 There are many ways in which you can contribute without programming, including (but not limited to):
 * Reporting bugs
-* Making minor fixes to the wording/layout (see [Contributing without access](#contributing-without-access))
+* Making minor fixes to the wording/layout
 * Defining the requirements or scope for a feature or improvement
 * Testing changes pushed to the [development server][link-bts-dev]
 * Assisting with the administration of the various development tools
@@ -302,7 +302,7 @@ If you get stuck or need help, then just send a message on the Slack workspace.
 
 [link-team-members]: https://github.com/backstage-technical-services
 [link-repository]: https://github.com/backstage-technical-services/laravel-site
-[link-report-issue]: https://github.com/backstage-technical-services/hub/issues/new
+[link-report-issue]: https://github.com/backstage-technical-services/hub/issues/new/choose
 [link-slack]: https://bts-website.slack.com
 [link-bugsnag]: https://app.bugsnag.com/backstage-technical-services
 [link-onetimesecret]: https://onetimesecret.com
