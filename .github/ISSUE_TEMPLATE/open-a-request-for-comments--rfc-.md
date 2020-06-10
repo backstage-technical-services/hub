@@ -1,3 +1,13 @@
+---
+name: Open a Request for Comments (RFC)
+about: Use this for a proposal which needs feedback from the wider community before
+  it can be approved. This is so we know it's the right thing to do.
+title: ''
+labels: status/waiting-on-feedback, type/rfc
+assignees: ''
+
+---
+
 # Request for Comments
 
 * Start Date: (YYYY-MM-DD)
@@ -31,6 +41,3 @@ of these?
 ## Adoption Strategy
 
 If the RFC is approved, how would we go about adopting or implementing it?
-
-
-\label ~"type::rfc"

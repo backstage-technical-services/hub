@@ -1,8 +1,9 @@
 # The Hub
 The Hub is the go-to place for any information about the website of Backstage Technical Services.
 
-As we are considering moving to an API and SPA, it made sense to move issues and documentation out of the Laravel site's 
-repository and into a central area.
+As we will be moving to an API and SPA, it made sense to
+move issues and documentation out of the Laravel site's repository and
+into a central area.
 
 **Useful Links**
 
@@ -33,7 +34,7 @@ See the separate [Version History][version-history] document.
 
 See the separate [Contribution Guide][contribution-guide].
 
-[new-issue]: https://gitlab.com/backstage-technical-services/website/hub/-/issues/new
+[new-issue]: https://github.com/backstage-technical-services/hub/issues/new
 [version-history]: ./Version%20History.md
 [contribution-guide]: ./Contributing.md
 [label-usage]: ./Usage%20of%20Labels.md

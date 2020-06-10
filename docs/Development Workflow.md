@@ -4,20 +4,10 @@ pre-defined workflows that all team members must use.
 
 This project uses the Kanban system; all tickets must go through the stages sequentially, and each stage has a set of 
 criteria that the ticket must meet before it is allowed to enter that stage. No one should work on something that is not 
-a ticket on GitLab, no matter how small - this helps us track what everyone's currently working on and avoids conflicts.
+a ticket on GitHub, no matter how small - this helps us track what everyone's currently working on and avoids conflicts.
 
-If you are intending on working on the site, please make sure you are familiar with this page.
-
-# GitLab Board
-While you can work from the [issue list][tickets-list], it's easier to visually see the workflow if you use the 
-[Kanban board][tickets-board].
-
-This board has been set up so that each column refers to a stage in the workflow, making it easier to see the progress 
-of everything that's being worked on. You can also transition tickets through the workflow by dragging them to the 
-relevant column, and GitLab will automatically handle updating the labels.
-
-This project uses a Kanban workflow (meaning that tickets can be worked on whenever, as long as they're ready) and the 
-various stages in the workflow are indicated by applying the relevant label.
+If you are intending on working on the site, please make sure you are
+familiar with this page.
 
 # Ticket Stages
 
@@ -100,11 +90,11 @@ is named according to the following format:
 release/{version}
 ```
 
-A ticket is added to this release by creating a [merge request][mr-new] (MR) into this release branch, triggering the 
+A ticket is added to this release by creating a [merge request][pr-new] (MR) into this release branch, triggering the
 code review process (this is when you move the ticket to `status: code-review`). You need to use the `Feature` MR 
 template when writing this MR - this makes sure that those reviewing the MR know what's being merged. It's also 
 important to make sure you reference the original ticket to make sure it's automatically closed when the work is merged 
-into `master` at the end - see [this guide][mr-autoclose-tickets].
+into `master` at the end - see [this guide][pr-autoclose-tickets].
 
 If the reviewer requests changes, you can simply push them to the original branch and they'll be picked up by the MR - 
 no need to open a new one! Once all the discussions are resolved (or if there weren't any to start with), the MR can be 
@@ -119,12 +109,13 @@ Once all of the tickets assigned to that release are ready, the entire release b
 be performed using an MR (although this merge request doesn't need to be approved) but it's often easier to perform this 
 merge locally and push. 
 
-The release is performed by tagging the release commit with a version tag: `{version}` (this should be the same as the 
-`release/{version}` branch name). The tag's release notes should include a list of everything being released (use the 
+The release is performed by tagging the release commit with a version tag: `{version}` (this should be the same as the
+`release/{version}` branch name). The tag's release notes should include a list of everything being released (use the
 previous MRs to help you), linking back to the original ticket where possible.
 
-The tag will begin the deployment process to live, but the actual deployment will need to be manually triggered from the 
-[CI/CD page][cicd].
+> We haven't set up CI/CD to automatically deploy code changes since
+> moving back to GitHub, so any updates need to be manually done. Ask in
+> Slack for help.
 
 ## Tidying Up
 Once a release has been deployed, there are a few bits of housekeeping to do:
@@ -134,10 +125,7 @@ Once a release has been deployed, there are a few bits of housekeeping to do:
 * Delete all the branches that were in the release
 * Close the milestone (if applicable)
 
-[tickets-list]: https://gitlab.com/backstage-technical-services/website/hub/-/issues
-[tickets-board]: https://gitlab.com/backstage-technical-services/website/hub/-/boards/1666975
 [atomic-commits]: http://www.pauline-vos.nl/atomic-commits/
 [commit-message-guide]: https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
-[mr-new]: https://gitlab.com/backstage-technical-services/laravel-site/merge_requests/new
-[mr-autoclose-tickets]: https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically
-[cicd]: https://gitlab.com/backstage-technical-services/laravel-site/pipelines
+[pr-new]: https://github.com/backstage-technical-services/laravel-site/compare
+[pr-autoclose-tickets]: https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue

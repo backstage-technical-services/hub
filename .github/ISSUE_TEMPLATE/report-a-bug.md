@@ -1,3 +1,12 @@
+---
+name: Report a Bug
+about: Use this to report when something doesn't work as expected.
+title: ''
+labels: status/needs-scoping, type/bug
+assignees: ''
+
+---
+
 #### Summary
 
 Provide a brief summary of the bug
@@ -29,7 +38,3 @@ This will let us see if there is any helpful information in the server logs
 How quickly does this need to be resolved? Is this preventing you or anyone else from being able to do something you/they need to?
 
 Use one of: Low, Medium, High, Very High
-
-\label ~"status::needs-scoping"
-
-\label ~"type::bug"
