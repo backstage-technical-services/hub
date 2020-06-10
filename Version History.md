@@ -19,7 +19,7 @@ up, using a framework to promote modularity and aid with future development. Thi
 responsive and "modern" design.
 
 Version 4 also led the move of the server to a VPS, full use of the Backstage domain ([bts-crew.com](http://www.bts-crew.com)) 
-and the use of git and GitLab to manage version control.
+and the use of git and GitHub to manage version control.
 
 This development is led by [Ben Jones](http://github.com/bnjns) and is built on PHP 7, MySQL 5.6 and Laravel 6.0 and 
 utilises Bootstrap 3.

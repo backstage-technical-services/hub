@@ -34,28 +34,31 @@ There are many ways in which you can contribute without programming, including (
 These may not sound as sexy as coding a completely new area of the website, but they are actually just as important!
 
 * If you just want to [report issues or request new features][link-report-issue], you do not need to read this document 
-  anymore (however, we recommend you read the section on [GitLab](#gitlab) so you know the basics of how it works).
+  anymore (however, we recommend you read the section on [GitHub](#github) so you know the basics of how it works).
 * If you want to get more involved with the development process please continue reading.
 
 ## Development tools
 We use a variety of different tools to assist with the development process; it's recommended you glance over this 
 section so you understand what each does, and which you need to use.
 
-### GitLab
-[GitLab][link-repository] houses the source code, and is responsible for source control and version management. GitLab 
-also houses our [issue tracker][link-report-issue]; the public and society members can use this to report bugs or 
-request features/improvements, and the team uses this for task management. To ensure traceability and enable us to 
-gather more information from issue reporters, you will need to [create a GitLab account][gitlab-register].
+### GitHub
+[GitHub][link-repository] houses the source code, and is responsible for
+source control and version management. GitHub also houses our [issue
+tracker][link-report-issue]; the public and society members can use this
+to report bugs or request features/improvements, and the team uses this
+for task management. To ensure traceability and enable us to gather more
+information from issue reporters, you will need to [create a GitHub
+account][github-register].
 
-To work on the repository you'll also need to be added to the [GitLab group][link-team-members]; either request access 
-through GitLab or in [Slack](#slack).
+To work on the repository you'll also need to be added to the [GitHub organisation][link-team-members]; either request access
+through GitHub or in [Slack](#slack).
 
-It is possible to make very small contributions without being a member of either the GitLab group or Slack channel - 
-fork the repository, make the change and submit a Merge Request. We strongly recommend against this route as we'd prefer 
-to build an informed team, rather than use a disorganised "hit and run" approach. These types of Merge Requests will be 
+It is possible to make very small contributions without being a member of either the GitHub group or Slack channel -
+fork the repository, make the change and submit a Pull Request. We strongly recommend against this route as we'd prefer
+to build an informed team, rather than use a disorganised "hit and run" approach. These types of Pull Requests will be
 assessed on a case-by-case basis.
 
-An introduction to git (which GitLab is a web interface for) can be found [here][link-git-help].
+An introduction to git (which GitHub is a web interface for) can be found [here][link-git-help].
 
 #### Tickets vs issues
 Within the team, we refer to issues in the issue tracker as "tickets"; we feel this better explains what the issues 
@@ -69,8 +72,8 @@ See the [Usage of Labels][label-usage] document.
 Using milestones is optional, but they can be a useful way of tracking upcoming releases and organising tickets into a 
 specific release. Only tickets should be assigned to a milestone.
 
-If milestones are being used, it's important that you don't create a merge request to release a ticket that's not 
-assigned to that release - doing so will result in the merge request being rejected.
+If milestones are being used, it's important that you don't create a pull request to release a ticket that's not
+assigned to that release - doing so will result in the pull request being rejected.
 
 ### Slack
 Good communication is vital, and ours happens on [Slack][link-slack]. We don't want anyone to be left out, so all 
@@ -106,8 +109,8 @@ Several Slack apps are installed, collecting notifications from our tools in 1 p
 internet and check each tool individually.
 
 Apps we currently have installed:
-* Notifications of new issues, merge requests and comments in the `#service-gitlab` channel
-* Notifications of pipelines in the `#service-gitlab` channel
+* Notifications of new issues, merge requests and comments in the `#service-github` channel
+* Notifications of CI pipelines in the `#service-ci` channel
 * Notifications of production errors in the `#service-bugsnag` channel
 * Notifications of full site backups in the `#service-backups` channel
 
@@ -119,18 +122,18 @@ We're currently on a free plan, so sharing isn't possible - but if you're workin
 provide you with any relevant information.
 
 ### One time secret
-[Onetimesecret][link-onetimesecret] is used to share sensitive information, such as values for the environment file. You 
+[Onetimesecret][link-onetimesecret] is used to share sensitive information, such as values for the environment file. You
 do not need an account to use this service.
 
-## Working on GitLab
-It's possible to make small, simple changes without doing anything on your local machine. This is really only for small 
-wording/spelling changes, and any requests to change logic with this method will be rejected as they won't have been 
+## Working on GitHub
+It's possible to make small, simple changes without doing anything on your local machine. This is really only for small
+wording/spelling changes, and any requests to change logic with this method will be rejected as they won't have been
 tested.
 
-1. **Create a fork of the repository:** This makes a copy of the repository that's attached to your profile on GitLab.
-2. **Make the changes:** Use the online editor to make the necessary changes. Go to the file you want to edit and click 
-  the `Edit` button. GitLab will help you with the process of creating commits to save the changes.
-3. **Create a merge request:** This notifies us of your changes, and allows us to combine them back into the main 
+1. **Create a fork of the repository:** This makes a copy of the repository that's attached to your profile on GitHub.
+2. **Make the changes:** Use the online editor to make the necessary changes. Go to the file you want to edit and click
+  the `Edit` button. GitHub will help you with the process of creating commits to save the changes.
+3. **Create a merge request:** This notifies us of your changes, and allows us to combine them back into the main
   repository. Once this is done, you can safely delete your fork.
 
 ## Working locally
@@ -186,7 +189,7 @@ See the [docs from Microsoft][link-windows-linux-support] for more information.
 Once you have the above configured, you can install the site:
 1. Clone the repository
     ```sh
-    $ git clone git@gitlab.com:backstage-technical-services/laravel-site.git
+    $ git clone git@github.com:backstage-technical-services/laravel-site.git
     ```
 2. Create the environment file from the example file
     ```sh
@@ -297,21 +300,18 @@ See the [Development Workflow][link-workflow] document.
 ## Questions or need help?
 If you get stuck or need help, then just send a message on the Slack workspace.
 
-[link-team-members]: https://gitlab.com/groups/backstage-technical-services/website/-/group_members
-[link-repository]: https://gitlab.com/backstage-technical-services/website/laravel-site
-[link-report-issue]: https://gitlab.com/backstage-technical-services/website/hub/-/issues
-[link-merge-request]: https://gitlab.com/backstage-technical-services/website/laravel-site/-/merge_requests/new
+[link-team-members]: https://github.com/backstage-technical-services
+[link-repository]: https://github.com/backstage-technical-services/laravel-site
+[link-report-issue]: https://github.com/backstage-technical-services/hub/issues/new
 [link-slack]: https://bts-website.slack.com
 [link-bugsnag]: https://app.bugsnag.com/backstage-technical-services
 [link-onetimesecret]: https://onetimesecret.com
-[link-phpstorm]: https://www.jetbrains.com/phpstorm
-[gitlab-register]: https://gitlab.com/users/sign_in#register-pane
-[link-ben]: https://www.gitlab.com/bnjns
+[github-register]: https://github.com/join
+[link-ben]: https://www.github.com/bnjns
 [link-laravel-docs]: https://laravel.com/docs/6.0
 [link-bts-dev]: https://staging.bts-crew.com/
 [link-git-help]: https://guides.github.com/introduction/git-handbook/
 [link-sass]: https://sass-lang.com/guide
-[link-gitlab-board]: https://gitlab.com/backstage-technical-services/website/hub/-/boards/1666975
 [link-workflow]: docs/Development%20Workflow.md
 [link-docker]: https://www.docker.com/
 [link-docker-install]: https://docs.docker.com/install/
