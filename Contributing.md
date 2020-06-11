@@ -9,12 +9,12 @@ involvement. You do not need to read all of these documents to be
 involved, just the ones relevant to your level of involvement.
 
 By contributing to this project in any way (from reporting issues to
-actual development) you are agreeing to abide by relevant the
+actual development) you are agreeing to abide by the relevant
 guidelines, rules and limitations outlined in these documents.
 
 If you have any questions, or want to clarify anything, please just get
 in contact with any [existing team member][team-members] or drop us a
-message on [Slack][slack].
+message on [Slack][slack] (ask the Secretary if you don't have access).
 
 > **Note:** These documents are constantly being reviewed and update;
 > please make sure you review them frequently.

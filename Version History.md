@@ -35,23 +35,26 @@ MySQL 5.6 and Laravel 6.0 and utilises Bootstrap 3.
 
 ### 5.x
 
-Although it used many modernisations and the use of MVC successfully
-decoupled the application logic from the presentation layer, the general
-organisation of projects made with Laravel made the application
-difficult to maintain as its size and complexity grew. Coupled with the
-lead developer moving languages and frameworks for their career, this
-meant that development ground to a halt.
+Despite the modernisations and decoupling of application logic from the
+presentation layer, the general organisation of the Laravel framework
+made the application difficult to maintain as its size and complexity
+grew.
 
-After a period [collecting feedback][v5-rfc] it was agreed to move to a
-separate API, for the business logic, and SPA, for the presentation layer.
+As the lead developer also changed language and framework for their
+career, development on the site became increasingly more difficult and
+quickly became sporadic, leading many to believe that development had
+stopped.
 
-The API is built in Kotlin and uses the Quarkus framework, backed by
-Keycloak for authorisation and authentication and a PostgreSQL database.
+After a period [collecting feedback][v5-rfc] it was agreed to move the
+site to a separate API (to handle the business logic) and SPA (to handle
+the presentation layer), using languages and frameworks the lead
+developer was more familiar with. The API is built in Kotlin and uses
+the Quarkus framework, backed by Keycloak for authorisation and
+authentication and a PostgreSQL database. The SPA is built in TypeScript
+and uses the Vue.js framework, using Bootstrap 4.
 
-The SPA is built in TypeScript and uses the Vue.js framework, using
-Bootstrap 4.
-
-Version 5 will also make use of Docker images for deployment.
+Version 5 also uses of Docker images for to simplify the deployment
+process, and will likely move hosting to Bath SU on-premises servers.
 
 [domain]: https://www.bts-crew.com
 [github-bnjns]: https://github.com/bnjns
