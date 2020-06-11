@@ -30,7 +30,7 @@ Version 4 also led the move of the server to a VPS, full use of the
 Backstage domain ([bts-crew.com][domain]) and the use of git and GitHub to
 manage version control.
 
-This development is led by [Ben Jones][gh-bnjns] and is built on PHP 7,
+This development is led by [Ben Jones][github-bnjns] and is built on PHP 7,
 MySQL 5.6 and Laravel 6.0 and utilises Bootstrap 3.
 
 ### 5.x
@@ -51,6 +51,8 @@ Keycloak for authorisation and authentication and a PostgreSQL database.
 The SPA is built in TypeScript and uses the Vue.js framework, using
 Bootstrap 4.
 
+Version 5 will also make use of Docker images for deployment.
+
 [domain]: https://www.bts-crew.com
-[gh-bnjns]: https://github.com/bnjns
+[github-bnjns]: https://github.com/bnjns
 [v5-rfc]: https://github.com/backstage-technical-services/hub/issues/112
