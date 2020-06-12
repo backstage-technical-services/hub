@@ -2,7 +2,7 @@
 name: Report a Bug
 about: Use this to report when something doesn't work as expected.
 title: ''
-labels: status/needs-scoping, type/bug
+labels: status/triage, type/bug
 assignees: ''
 
 ---

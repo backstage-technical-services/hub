@@ -9,6 +9,8 @@ Labels should only be applied to tickets, and not merge requests.
 
 ## Prefixes
 
+* `needs/` is used to indicate what a ticket needs before it can be
+  considered ready to work on (eg, UI design, copy, etc).
 * `status/` is used to indicate where in the workflow the ticket is. A
   ticket can only have one of these labels.
 * `type/` is used to indicate the type of ticket (eg, bug, feature,
