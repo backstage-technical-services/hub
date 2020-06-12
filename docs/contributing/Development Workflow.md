@@ -32,17 +32,19 @@ currently working on and avoids conflicts.
 
    The reviewer will add a series of labels with the `needs` prefix to
    indicate what information is needed. Triage is complete once the
-   `status/triage` label is removed.
+   `status/triage` label is removed and it moves to the "Refinement"
+   stage.
 
-   A ticket may not need refinement if this triage process determines it
-   to be sufficiently detailed; in which case it can progress straight
-   to `Ready`, and the reviewer will unassign themselves.
+   > A ticket may not need refinement if this triage process determines
+   > it to be sufficiently detailed; in which case it can progress
+   > straight to `Ready`, and the reviewer will unassign themselves.
 
 2. **Refinement**
 
-   Once a ticket has been triage it must be refined; this is a fancy
+   Once a ticket has been triaged it must be refined; this is a fancy
    word for resolving all of the `needs` labels. Each label must be
-   either resolved or deemed no longer necessary. As each label is
+   either resolved or deemed no longer necessary (however, you should
+   check with the person who triaged the ticket first). As each label is
    removed, the results of the refinement must be added to the ticket,
    either as a comment or in the description.
 
@@ -69,7 +71,7 @@ currently working on and avoids conflicts.
    to and why you had to stop. This is so that someone else can pick it
    up.
 
-5. **Review** `status/in-review`
+5. **Review:** `status/in-review`
 
    Once the work on a ticket is completed it goes through 2 stages of
    review:
