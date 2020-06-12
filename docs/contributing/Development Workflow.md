@@ -17,13 +17,12 @@ currently working on and avoids conflicts.
 
    All new tickets must start with what's called "triage"; this is a
    process that someone must go through to determine what a ticket needs
-   before it is ready to be worked on. It is quite common for the person
-   reviewing the ticket to assign it to themselves.
+   before it is ready to be worked on.
 
    This process is mostly driven by experience and so there is no
    hard-and-fast rule as to what "ready" means, but the reviewer will
    read the ticket description and determine what further information is
-   needed (called "refinement" before it can be worked on by a
+   needed (called "refinement") before it can be worked on by a
    developer. This could include:
 
    * UI designs
