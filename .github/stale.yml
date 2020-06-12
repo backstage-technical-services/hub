@@ -1,16 +1,16 @@
-daysUntilStale: 180
-daysUntilClose: 30
+daysUntilStale: 90
+daysUntilClose: 21
 onlyLabels:
   - status/needs-scoping
   - status/waiting-on-feedback
 exemptLabels:
   - keep-open
   - urgent
-staleLabel: abandoned
+staleLabel: stale
 markComment: >
   This issue has been automatically marked as stale because it has not had
-  recent activity. It will be closed if no further activity occurs. To keep
-  it open please talk to the development team.
+  recent activity. It will be closed in 3 weeks if no further activity occurs. 
+  To keep it open please talk to the development team.
 closeComment: >
   This issue has been automatically closed as it has not had recent activity.
   You can re-open this issue if you feel it should still be worked on.
@@ -18,4 +18,4 @@ pulls:
   daysUntilStale: 14
   markComment: >
     This pull request has been automatically marked as stale because it has not had
-    recent activity. It will be closed if no further activity occurs.
+    recent activity. It will be closed in 2 weeks if no further activity occurs.
