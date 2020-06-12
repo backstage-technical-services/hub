@@ -98,7 +98,8 @@ useful then let the Slack Admins know!
 All parts of the website use git for version control and to make
 collaboration between multiple team members easy.
 
-GitHub have made a handy [handbook][git-handbook] on basic git usage.
+If you are unfamiliar with git, GitHub have a [handbook][git-handbook]
+on basic git usage.
 
 ## GitHub
 
@@ -252,3 +253,4 @@ You do not need an account to use this tool.
 [contributing-developing]: ./contributing/Developing.md
 [contributing-workflow]: ./contributing/Development%20Workflow.md
 [onetimesecret]: https://onetimesecret.com
+
