@@ -1,4 +1,4 @@
-# Usage of Labels
+# Use of Labels
 
 It's easy to get lost in the sea of tickets in GitHub so using labels
 well is vital. We use both prefixes and colours to help organise our

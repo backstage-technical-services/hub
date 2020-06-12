@@ -44,5 +44,5 @@ See the separate [Contribution Guide][contribution-guide].
 [new-issue]: https://github.com/backstage-technical-services/hub/issues/new/choose
 [version-history]: ./Version%20History.md
 [contribution-guide]: ./Contributing.md
-[label-usage]: ./Usage%20of%20Labels.md
+[label-usage]: Use%20of%20Labels.md
 

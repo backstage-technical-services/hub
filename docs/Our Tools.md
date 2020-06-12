@@ -126,7 +126,7 @@ questions).
 
 ### Use of labels
 
-See the [Usage of Labels][label-usage] document.
+See the [Use of Labels][label-usage] document.
 
 ### Milestones
 
@@ -243,7 +243,7 @@ You do not need an account to use this tool.
 [github-register]: https://github.com/join
 [github-issues]: https://github.com/backstage-technical-services/hub/issues
 [github-team]: https://github.com/orgs/backstage-technical-services/people
-[label-usage]: ../Usage%20of%20Labels.md
+[label-usage]: ../Use%20of%20Labels.md
 [zenhub-board]: https://app.zenhub.com/workspaces/website-5ee3b9f45f28495afe8be3f9/board
 [zenhub-extension]: https://www.zenhub.com/extension
 [circleci]: https://app.circleci.com/projects
