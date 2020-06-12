@@ -2,7 +2,7 @@
 name: Suggest an Improvement
 about: Use this to suggest an improvement on something that already exists.
 title: ''
-labels: status/needs-scoping, type/improvement
+labels: status/triage, type/improvement
 assignees: ''
 
 ---

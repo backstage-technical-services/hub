@@ -3,7 +3,7 @@ name: Open a Request for Comments (RFC)
 about: Use this for a proposal which needs feedback from the wider community before
   it can be approved. This is so we know it's the right thing to do.
 title: ''
-labels: status/waiting-on-feedback, type/rfc
+labels: status/in-progress, type/rfc, needs/feedback, keep-open
 assignees: ''
 
 ---

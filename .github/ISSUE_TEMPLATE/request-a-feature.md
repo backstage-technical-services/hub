@@ -2,7 +2,7 @@
 name: Request a Feature
 about: Use this when you would like something to be added.
 title: ''
-labels: status/needs-scoping, type/feature
+labels: status/triage, type/feature
 assignees: ''
 
 ---
