@@ -1,75 +1,122 @@
 # Development Workflow
-To ensure consistency throughout the team, and to minimise the risk of releasing broken code, this project uses a set of 
-pre-defined workflows that all team members must use. 
 
-This project uses the Kanban system; all tickets must go through the stages sequentially, and each stage has a set of 
-criteria that the ticket must meet before it is allowed to enter that stage. No one should work on something that is not 
-a ticket on GitHub, no matter how small - this helps us track what everyone's currently working on and avoids conflicts.
+To ensure consistency throughout the team, and to minimise the risk of
+releasing broken code, this project uses a workflow that all tickets
+must follow.
 
-If you are intending on working on the site, please make sure you are
-familiar with this page.
+We use a Kanban system to allow us to work on any ticket as soon we can,
+but all tickets must go through the stages sequentially, and each stage
+has a set of criteria that the ticket must meet before it is allowed to
+enter that stage. No one should work on something that is not a ticket
+on GitHub (no matter how small); this helps us track what everyone's
+currently working on and avoids conflicts.
 
-# Ticket Stages
+# Ticket Lifecycle
 
-1. **Backlog:**
+1. **Triage:** `status/triage`
 
-   All tickets begin their life in the "Backlog". This isn't a physical space and there isn't a label for it; this is 
-   simply for tickets which we haven't agreed are ready to be worked on yet. These tickets will appear in the `Open` 
-   column on the board. 
+   All new tickets must start with what's called "triage"; this is a
+   process that someone must go through to determine what a ticket needs
+   before it is ready to be worked on. It is quite common for the person
+   reviewing the ticket to assign it to themselves.
 
-2. **Ready:** `status/ready`
+   This process is mostly driven by experience and so there is no
+   hard-and-fast rule as to what "ready" means, but the reviewer will
+   read the ticket description and determine what further information is
+   needed (called "refinement" before it can be worked on by a
+   developer. This could include:
 
-   Once we have enough information to know how to implement a ticket and have agreed it should be worked on, it will be 
-   marked as "Ready". Tickets should only be moved here by a Maintainer, as they'll know what means a ticket is ready to 
-   be worked on.
-   
-3. **In Progress:** `status/in-progress`
+   * UI designs
+   * Planning the domain/database structure
+   * Researching possible solutions
+   * Gaining community feedback
 
-   When you start working on a ticket (see below), mark it as "In Progress" and assign yourself to it (so everyone knows 
-   who's working on it).
+   The reviewer will add a series of labels with the `needs` prefix to
+   indicate what information is needed. Triage is complete once the
+   `status/triage` label is removed.
 
-   > Don't want to work on a ticket anymore? Simply un-assign yourself and mark it as "Ready" again so that someone else 
-   > can pick it up.
+   A ticket may not need refinement if this triage process determines it
+   to be sufficiently detailed; in which case it can progress straight
+   to `Ready`, and the reviewer will unassign themselves.
 
-4. **Code Review:** `status/code-review`
+2. **Refinement**
 
-   Once a ticket is complete and is ready to be released it needs to undergo a quick code review. This stage is performed 
-   by another member of the team and is there simply to check that what you've done makes sense, and follows good 
-   programming practices.
+   Once a ticket has been triage it must be refined; this is a fancy
+   word for resolving all of the `needs` labels. Each label must be
+   either resolved or deemed no longer necessary. As each label is
+   removed, the results of the refinement must be added to the ticket,
+   either as a comment or in the description.
 
-    > There's no need to change the assignee of the ticket to reflect the person performing the code review - this will 
-    > be handled by the assignee of the merge request
+   Once all of the `needs` labels have been removed, the ticket can
+   progress to the next stage.
 
-5. **QA:** `status/qa`
+3. **Ready:** `status/ready`
 
-   Once a ticket has passed code review and has deployed to our staging environment, it is ready for QA. This stage 
-   verifies that the work functions as expected, resolves the ticket and doesn't adversely affect the rest of the site.
+   Once we have enough information to know how to implement a ticket and
+   have agreed it should be worked on, it will be marked as "Ready".
+   This means a member of the development team can begin working on it
+   whenever they want.
 
-6. **Ready for Release:** `status/ready-for-release`
+4. **In Progress:** `status/in-progress`
 
-   Once a ticket passes QA, it is marked as "Ready for release". Only when all tickets in that release are in this stage 
-   will the release be cleared to proceed.
+   When you start working on a ticket (see [below](#beginning-work)), mark it as "In
+   Progress" and assign yourself to it so everyone knows who's working
+   on it. It's important to communicate that you've picked up the ticket
+   and are open to working on it with others, as someone else may be
+   interested in working on it too.
 
-Once a ticket is complete and released it will be automatically closed, and moved to the `Done` column in the board.
+   If at any point you can no longer continue with the ticket then mark
+   is as "Ready", unassign yourself and post a comment of where you got
+   to and why you had to stop. This is so that someone else can pick it
+   up.
+
+5. **Review** `status/in-review`
+
+   Once the work on a ticket is completed it goes through 2 stages of
+   review:
+
+   * **Code Review:** This is performed by another member of the team
+     when a Pull Request is opened. This simply checks that what you've
+     done makes sense and follows good programming practices. This step
+     uses CI/CD pipelines to check common issues, such as tests and,
+     vulnerabilities and code quality.
+   * **Quality Assurance (QA):** This is performed after the Pull
+     Request is approved and merged and simply verifies that the work
+     does resolve the ticket without adversely affecting the rest of the
+     site. For most tickets with a code coverage of tests, this is a
+     very quick check to ensure that the new code deploys successfully.
+
+6. **Released**
+
+    Once a ticket passes QA it is ready to be released! Anyone with
+    access to the CI/CD workflow can perform this process.
 
 # Workflow
 
 ## Beginning work
-When you pick a ticket and mark it as "In Progress", you can start working on it locally.
 
-All work should be performed on its own branch, based on `master`. The name of this branch should be all lowercase, use 
-hypens instead of spaces and include the ticket number and a short summary in the following format:
+When you pick a ticket and mark it as "In Progress", you can start
+working on it locally.
+
+All work should be performed on its own branch, based on `master`. The
+name of this branch should be all lowercase, use hypens instead of
+spaces and include the ticket number and a short summary of the work in
+the following format:
 
 ```
 {number}-{short-summary}
 ```
 
 ## Committing your work
-You should commit your work frequently, with each commit containing a small change. These are known as "atomic commits", 
-and make it easier to understand the commit history, as well as resolve conflicts and revert broken code.
 
-Each commit message should begin with the ticket number and include a more detailed description if you feel you need 
-more than 50 characters to explain the work.
+You should commit your work frequently, with each commit containing a
+small change. These are known as "atomic commits", and make it easier to
+understand the commit history, as well as resolve conflicts and revert
+broken code.
+
+Each commit message should begin with the ticket number and include a
+more detailed description if you feel you need more than 50 characters
+to explain the work.
 
 ```
 {#}: {commit summary}
@@ -77,55 +124,118 @@ more than 50 characters to explain the work.
 {optional commit description}
 ```
 
-See [this guide on atomic commits][atomic-commits] and [this one on good commit messages][commit-message-guide] for more 
-information.
+See [this guide on atomic commits][atomic-commits] and [this one on good
+commit messages][commit-message-guide] for more information.
+
+> If your commits are getting rejected due to them being unsigned, you
+> will need to [generate a GPG key][add-gpg-key] and [sign your
+> commits][signed-commits]. We enforce signed commits to ensure those
+> committing are who they say they are - see this [interesting
+> post][why-sign-commits] for more information.
 
 ## Releasing your work
-_This process can only be performed by a maintainer._
 
-Once work is complete on a ticket, it can be released using a "release branch"; this branch is created from `master` and 
-is named according to the following format:
+Your work is released to the world by merging it into the `master`
+branch using a Pull Request (PR).
 
-```
-release/{version}
-```
+### Creating a Pull Request (PR)
 
-A ticket is added to this release by creating a [merge request][pr-new] (MR) into this release branch, triggering the
-code review process (this is when you move the ticket to `status: code-review`). You need to use the `Feature` MR 
-template when writing this MR - this makes sure that those reviewing the MR know what's being merged. It's also 
-important to make sure you reference the original ticket to make sure it's automatically closed when the work is merged 
-into `master` at the end - see [this guide][pr-autoclose-tickets].
+Once the ticket is complete, ensure you have pushed it all and then
+navigate to the repository and click `Pull requests > New pull request`.
+The `compare` branch should be your branch, and the `base` branch should
+be `master`.
 
-If the reviewer requests changes, you can simply push them to the original branch and they'll be picked up by the MR - 
-no need to open a new one! Once all the discussions are resolved (or if there weren't any to start with), the MR can be 
-approved. This will merge that branch into the release branch, and deploy the work to our staging environment.
+It is very important that when you make a PR you enter a descriptive
+title and detailed description. At the very least, the title should
+include the ticket number and a brief summary of the work - make sure
+this title doesn't go over the character limit in GitHub.
 
-Once the work has deployed to our staging environment, the ticket enters the QA stage (move the ticket to `status: qa`). 
-If changes are requested they should also be pushed to the original branch, but these will need to be merged into the 
-release branch with another MR - this makes sure that the changes also undergo a code review. Once the ticket passes QA 
-it's ready to be released and can be moved to `status: ready-to-release`.
+Writing a good PR description is a skill in and of itself, but the
+important thing to remember is to describe why and not what. Code should
+be self documenting and so what it's doing should be obvious to those
+reviewing, but what may not be obvious is why you chose that approach.
+Use the PR to inform and justify any decisions (if anything this
+prevents any "why did you do this?" comments), and highlight any issues
+you encountered - it's likely you learned something while completing
+this work and PRs are a great way to distribute this knowledge to the
+rest of the team. Make sure you use the PR template and have filled it
+in correctly.
 
-Once all of the tickets assigned to that release are ready, the entire release branch is merged into `master`. This can 
-be performed using an MR (although this merge request doesn't need to be approved) but it's often easier to perform this 
-merge locally and push. 
+> **Tip:** if your work isn't quite complete but you want people to take
+> a look at it early, you can open a draft PR. Once then work is
+> complete, you can then mark this as "Ready for review".
 
-The release is performed by tagging the release commit with a version tag: `{version}` (this should be the same as the
-`release/{version}` branch name). The tag's release notes should include a list of everything being released (use the
-previous MRs to help you), linking back to the original ticket where possible.
+Once you have opened a PR you should mark the ticket as "In Review".
 
-> We haven't set up CI/CD to automatically deploy code changes since
-> moving back to GitHub, so any updates need to be manually done. Ask in
-> Slack for help.
+### Reviewing a Pull Request
+
+Reviewing a PR should be a constructive process, and a learning
+opportunity for both the author and reviewer. Any comments you leave, as
+well as replies to other comments, must be constructive. If you feel
+strongly about a comment, it is often a good idea to chat to the other
+party directly in Slack and don't be afraid to use someone else as a
+mediator!
+
+If the reviewer has requested changes that you are happy to make, you
+can simply commit and push them to the same branch and they'll be picked
+up by the same PR. If you do any existing reviews will be marked as
+"stale", and you'll need to re-request a review from a member of the team.
+
+### Merging the Pull Request
+
+Once a PR is approved and all of the CI/CD checks have passed you can
+merge the PR simply by pressing the "Squash and merge" button.
+
+> **Tip:** GitHub scans the contents of commits merged into `master` and
+> if the commit contains a [recognised keyword][pr-autoclose-tickets]
+> GitHub will automatically close the ticket for you.
+
+When merging, make sure you use a reasonable commit title and message.
+The PR title is often sufficient for the commit title, but it is often a
+good idea to include any details in the PR description in the commit
+message to help anyone looking at the git history understand what's
+going on.
+
+> We enforce squashing and merging for all repositories to ensure we
+> keep a linear git history and prevent `master` from containing any
+> merge commits as this make it hard to understand the history
+
+### Quality Assurance
+
+Once the PR has been merged the work will automatically build and deploy
+to our [staging environment][staging]. This allows us to verify that the
+work deploys successfully and meets the requirements of the ticket.
+
+> **Note:** We haven't set up CI/CD to automatically deploy code changes
+> since moving back to GitHub, so any updates need to be manually done.
+> Ask in Slack for help.
+
+### Deploying to production
+
+Once the ticket passes QA, it can be deployed to production by pressing
+the approval step in CI to trigger the automatic deployment process.
+
+If this succeeds, congratulations - you've just deployed some code to
+the website!
+
+> **Note:** We haven't set up CI/CD to automatically deploy code changes
+> since moving back to GitHub, so any updates need to be manually done.
+> Ask in Slack for help.
 
 ## Tidying Up
-Once a release has been deployed, there are a few bits of housekeeping to do:
 
-* Make sure all of the tickets in the release have been closed automatically. If they haven't, manually close them with 
-  a comment that links to the release.
-* Delete all the branches that were in the release
-* Close the milestone (if applicable)
+Once your work has been deployed, there may be a few bits of
+housekeeping to do:
+
+* Make sure the ticket has been closed. If it hasn't include a comment
+  in the issue that links to the commit hash that closed the issue, and
+  then manually close it
+* Close any milestones, if applicable
 
 [atomic-commits]: http://www.pauline-vos.nl/atomic-commits/
 [commit-message-guide]: https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
-[pr-new]: https://github.com/backstage-technical-services/laravel-site/compare
+[add-gpg-key]: https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account
+[signed-commits]: https://help.github.com/en/github/authenticating-to-github/signing-commits
+[why-sign-commits]: https://mikegerwitz.com/2012/05/a-git-horror-story-repository-integrity-with-signed-commits
 [pr-autoclose-tickets]: https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue
+[staging]: https://staging.bts-crew.com
