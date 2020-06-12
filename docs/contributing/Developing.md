@@ -1,6 +1,6 @@
 # Contributing - Developing
 
-> Please make sure you have read the [main contributing
+> Please make sure you have read the [main contribution
 > guide][contributing-main] first and are familiar with the [development
 > workflow][contributing-workflow].
 

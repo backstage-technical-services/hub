@@ -1,6 +1,6 @@
 # Contributing - Wording Changes
 
-> Please make sure you have read the [main contributing
+> Please make sure you have read the [main contribution
 > guide][contributing-main] first.
 
 Although not recommend, it is possible to make small, simple changes
