@@ -6,47 +6,6 @@ well as automation of common tasks.
 Most of these tools are free to use by anyone; if you would like access
 you can ask someone in [Slack][slack].
 
-## Git
-
-All parts of the website use git for version control and to make
-collaboration between multiple team members easy.
-
-GitHub have made a handy [handbook][git-handbook] on basic git usage.
-
-## GitHub
-
-[GitHub][github] houses all our source code and [issue
-tracker][github-issues], which is where people can report bugs and
-request features.
-
-Some of our repositories also make use of GitHub Actions to run our
-CI/CD workflows, which are used to automate the build and deployment of
-that software. Due to some limitations with GitHub, some of our
-repositories use [CircleCI](#circleci) instead.
-
-Anyone with a [GitHub account][github-register] is able to create
-issues, and members can request access to the [GitHub
-organisation][github-team] if they wish to work on the website. See
-[Reporting Issues][contributing-issues] and
-[Developing][contributing-developing] respectively.
-
-### Tickets vs issues
-
-Within the team, we refer to issues in the issue tracker as "tickets";
-we feel this better explains what the issues represent (after all, not
-all tickets are actually issues - they may be requests or even
-questions).
-
-### Use of labels
-
-See the [Usage of Labels][label-usage] document.
-
-### Milestones
-
-Using milestones is optional, but they can be a useful way of tracking
-upcoming releases and organising tickets into a specific release. Only
-tickets should be assigned to a milestone.
-
 ## Slack
 
 Good communication is vital and ours happens on [Slack][slack], a
@@ -82,10 +41,12 @@ Some other potentially useful channels are:
   including the registry, renewals, TLS certificates etc.
 * `ops-hosting`: This is where we talk about the hosting provider for
   the website.
+* `ops-security`: This is where we talk about anything security related.
+  [Snyk](#snyk) also posts notifications of vulnerabilities here.
 * `service-github`: This is where important notifications from GitHub
   are posted, including new Pull Requests.
-* `service-rss`: This is where any relevant news in the world of tech is
-  posted.
+* `service-rss`: This is where any potentially interesting news in the
+  world of tech is posted.
 
 ### Notifications
 
@@ -104,38 +65,190 @@ hints). Those with the correct permissions can also use `@here`,
 `@channel` and `@everyone` if the post is really important so everyone
 gets a notification.
 
-### Apps
+### Integrations
 
-_Needs detail_
+Our Slack workspace has a few integrations installed to make everyone's
+lives slightly easier:
+
+* **GitHub:** This allows you to interact with GitHub issues and PRs
+  without needing to go to the website! It also posts notifications to
+  the `service-github` channel.
+* **Google Drive:** This allows you to see previews of files and folders
+  within Slack when a link is posted (as long as you have access to it).
+  You can even find and create files right from within Slack.
+* **Google Hangouts:** We use Google Meet (aka Hangouts) for our
+  meetings; using this integration you can create a meet from within
+  Slack.
+* **Giphy:** For those times when an animated GIF perfectly sums up your
+  reaction to something.
+* **Bugsnag:** Bugsnag is the application that monitors v4 of the
+  website, and instantly reports in Slack when an error occurs so that
+  we know that a problem's occurred even before the user can report the
+  issue in GitHub.
+
+  > This integration is being deprecated as it is not supported by
+  > Quarkus. v5 of the website will use Sentry.io instead.
+
+As we are on the free plan we can only add a limited number of
+integrations, however if there's something that you think would be
+useful then let the Slack Admins know!
+
+## Git
+
+All parts of the website use git for version control and to make
+collaboration between multiple team members easy.
+
+GitHub have made a handy [handbook][git-handbook] on basic git usage.
+
+## GitHub
+
+[GitHub][github] houses all our source code and [issue
+tracker][github-issues], which is where people can report bugs and
+request features.
+
+Some of our repositories also make use of GitHub Actions to run our
+CI/CD workflows, which are used to automate the build and deployment of
+that software.
+
+Anyone with a [GitHub account][github-register] is able to create
+issues, and members can request access to the [GitHub
+organisation][github-team] if they wish to work on the website. See
+[Reporting Issues][contributing-issues] and
+[Developing][contributing-developing] respectively.
+
+### Tickets vs issues
+
+Within the team, we refer to issues in the issue tracker as "tickets";
+we feel this better explains what the issues represent (after all, not
+all tickets are actually issues - they may be requests or even
+questions).
+
+### Use of labels
+
+See the [Usage of Labels][label-usage] document.
+
+### Milestones
+
+We sometimes use milestones to group issues that we want to release
+together, and track the progress of upcoming releases. Only issues
+should ever be assigned to milestones, to avoid duplicating information
+on the milestone.
+
+## ZenHub
+
+While GitHub's issue tracker is very powerful, it can be difficult to
+see at a glance how everything is progressing. GitHub Projects offers
+promise for a fully integrated solution, but until it is more mature we
+use [ZenHub][zenhub-board].
+
+This is a Kanban board (where issues are brought in and worked on
+whenever they're ready), and allows us to easily see and manage issues.
+This board is the recommended way to manage lots of issues in one go, or
+to easily see what tickets you can start working on.
+
+You can see this board from within GitHub if you [install the
+extension][zenhub-extension]. This adds an additional tab to the
+[hub][github-issues] alongside Issues and Pull Requests.
+
+Anyone in the GitHub organisation will be able to see this board,
+although you may need to authorise the app and log in with GitHub first.
+
+See the [Development Workflow][contributing-workflow] for information on
+what the different columns mean.
 
 ## CircleCI
 
-_Needs detail_
+GitHub Actions is sadly a little limited for some of the complex CI/CD
+workflows needed by the API and SPA. Until it has matured, these two
+repositories use [CircleCI][circleci], a leader in the world of CI/CD.
+
+As our repositories are Open-Source Software (OSS), CircleCI grants us a
+very large number of credits to use for builds. However, some builds can
+take a long time so we only trigger them for Pull Requests and commits
+on `master`. As a result, you should only open a Pull Request when the
+work is ready to be reviewed.
+
+Sensitive information, such as API tokens and auth credentials, are
+injected into each job using environment variables. We also take
+advantage of a feature called "Contexts" to allow us to re-use these
+sensitive values across both repositories.
+
+Anyone in the GitHub organisation can access the CircleCI builds; just
+ensure you log in with GitHub and select the
+`backstage-technical-services` organisation and then the repository you
+want to view.
 
 ## SonarCloud
 
-_Needs detail_
+[SonarCloud][sonarcloud] is a code quality analysis code that can be
+used to ensure all of your code is clean, and can even detect bugs and
+"code smells" (code that is indicative of logic errors that may lead to
+bugs in future).
+
+SonarCloud is a required CI step for all Pull Requests and builds on
+`master`, with some checks that have to pass in order for the code to be
+considered healthy:
+
+* Test coverage > 70%
+* High maintainability
+* High reliability
+* Minimal duplicated lines (< 3%)
+
+SonarCloud will even post the results of the check as a comment in Pull
+Requests, but you can also view the results of any branch or Pull
+Request in the [dashboard][sonarcloud].
+
+Anyone in the GitHub organisation can access SonarCloud; just log in
+with your GitHub account.
 
 ## Snyk
 
-_Needs detail_
+All projects need to use third-party dependencies as the last thing you
+want to do is re-invent the wheel for everything. Sadly, with this comes
+the risk that these dependencies contain a vulnerability that can be
+exploited.
+
+Snyk automatically analyses our dependencies to detect these
+vulnerabilities, and informs us when one is found. It's both a required
+step in our CI process (so new dependencies don't introduce
+vulnerabilities), but it also continually monitors our apps and notifies
+us of any new vulnerabilities. It even creates Pull Requests
+automatically to resolve the issues, if it can.
+
+Sadly Snyk.io is not linked to the GitHub organisation, so access is
+limited. However, you can request access by asking in Slack.
 
 ## Sentry
 
-_Needs detail_
+Sentry is a cloud-based error monitoring tool used to detect application
+errors in real-time, allowing you to react to issues without needing
+users to report bugs in GitHub.
+
+We haven't yet set up Sentry, but it will be integrated into the API.
 
 ## One-Time Secret
 
 [One-Time Secret][onetimesecret] is used to share sensitive information,
-such as environment files. You do not need an account to use this tool.
+such as environment files. This tools gives you a link that can only be
+used once for you to give to the recipient. For additional security, you
+can also set a timeout on the link and provide a passphrase to ensure
+the person using the link is the intended recipient.
 
+You do not need an account to use this tool.
+
+[slack]: https://bts-website.slack.com
 [git-handbook]: https://guides.github.com/introduction/git-handbook/
 [github]: https://github.com/backstage-technical-services
 [github-register]: https://github.com/join
 [github-issues]: https://github.com/backstage-technical-services/hub/issues
 [github-team]: https://github.com/orgs/backstage-technical-services/people
 [label-usage]: ../Usage%20of%20Labels.md
+[zenhub-board]: https://app.zenhub.com/workspaces/website-5ee3b9f45f28495afe8be3f9/board
+[zenhub-extension]: https://www.zenhub.com/extension
+[circleci]: https://app.circleci.com/projects
+[sonarcloud]: https://sonarcloud.io/projects
+[snyk]: https://app.snyk.io/org/backstage-technical-services/projects
 [contributing-issues]: ./contributing/Reporting%20Issues.md
 [contributing-developing]: ./contributing/Developing.md
-[slack]: https://bts-website.slack.com
+[contributing-workflow]: ./contributing/Development%20Workflow.md
 [onetimesecret]: https://onetimesecret.com
