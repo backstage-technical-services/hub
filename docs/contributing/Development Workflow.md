@@ -11,7 +11,7 @@ enter that stage. No one should work on something that is not a ticket
 on GitHub (no matter how small); this helps us track what everyone's
 currently working on and avoids conflicts.
 
-# Ticket Lifecycle
+## Ticket Lifecycle
 
 1. **Triage:** `status/triage`
 
@@ -91,9 +91,9 @@ currently working on and avoids conflicts.
     Once a ticket passes QA it is ready to be released! Anyone with
     access to the CI/CD workflow can perform this process.
 
-# Workflow
+## Workflow
 
-## Beginning work
+### Beginning work
 
 When you pick a ticket and mark it as "In Progress", you can start
 working on it locally.
@@ -107,7 +107,7 @@ the following format:
 {number}-{short-summary}
 ```
 
-## Committing your work
+### Committing your work
 
 You should commit your work frequently, with each commit containing a
 small change. These are known as "atomic commits", and make it easier to
@@ -133,12 +133,12 @@ commit messages][commit-message-guide] for more information.
 > committing are who they say they are - see this [interesting
 > post][why-sign-commits] for more information.
 
-## Releasing your work
+### Releasing your work
 
 Your work is released to the world by merging it into the `master`
 branch using a Pull Request (PR).
 
-### Creating a Pull Request (PR)
+#### Creating a Pull Request (PR)
 
 Once the ticket is complete, ensure you have pushed it all and then
 navigate to the repository and click `Pull requests > New pull request`.
@@ -167,7 +167,7 @@ in correctly.
 
 Once you have opened a PR you should mark the ticket as "In Review".
 
-### Reviewing a Pull Request
+#### Reviewing a Pull Request
 
 Reviewing a PR should be a constructive process, and a learning
 opportunity for both the author and reviewer. Any comments you leave, as
@@ -181,7 +181,7 @@ can simply commit and push them to the same branch and they'll be picked
 up by the same PR. If you do any existing reviews will be marked as
 "stale", and you'll need to re-request a review from a member of the team.
 
-### Merging the Pull Request
+#### Merging the Pull Request
 
 Once a PR is approved and all of the CI/CD checks have passed you can
 merge the PR simply by pressing the "Squash and merge" button.
@@ -200,7 +200,7 @@ going on.
 > keep a linear git history and prevent `master` from containing any
 > merge commits as this make it hard to understand the history
 
-### Quality Assurance
+#### Quality Assurance
 
 Once the PR has been merged the work will automatically build and deploy
 to our [staging environment][staging]. This allows us to verify that the
@@ -210,7 +210,7 @@ work deploys successfully and meets the requirements of the ticket.
 > since moving back to GitHub, so any updates need to be manually done.
 > Ask in Slack for help.
 
-### Deploying to production
+#### Deploying to production
 
 Once the ticket passes QA, it can be deployed to production by pressing
 the approval step in CI to trigger the automatic deployment process.
@@ -222,7 +222,7 @@ the website!
 > since moving back to GitHub, so any updates need to be manually done.
 > Ask in Slack for help.
 
-## Tidying Up
+### Tidying Up
 
 Once your work has been deployed, there may be a few bits of
 housekeeping to do:
