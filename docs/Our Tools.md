@@ -209,7 +209,7 @@ want to do is re-invent the wheel for everything. Sadly, with this comes
 the risk that these dependencies contain a vulnerability that can be
 exploited.
 
-Snyk automatically analyses our dependencies to detect these
+[Snyk][snyk] automatically analyses our dependencies to detect these
 vulnerabilities, and informs us when one is found. It's both a required
 step in our CI process (so new dependencies don't introduce
 vulnerabilities), but it also continually monitors our apps and notifies
