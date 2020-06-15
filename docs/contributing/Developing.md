@@ -3,6 +3,9 @@
 > Please make sure you have read the [main contribution
 > guide][contributing-main] first and are familiar with the [development
 > workflow][contributing-workflow].
+>
+> It would also be a good idea to familiarise yourself with [our
+> tools][contributing-tools].
 
 ## Pre-requisites
 
@@ -73,10 +76,10 @@ up on your computer.
 
 5. jq (a tool used for JSON processing)
 
-    * On macOS, if you have [homebrew][homebrew] installed just run `brew
-      install jq`
-    * On Linux, it's likely `jq` is available from your package manager
-    * If all else fails, you can [download it][jq]
+   * On macOS, if you have [homebrew][homebrew] installed just run `brew
+     install jq`
+   * On Linux, it's likely `jq` is available from your package manager
+   * If all else fails, you can [download it][jq]
 
 ## Getting started
 
@@ -100,6 +103,7 @@ If you have any questions or need help don't hesitate to ask in
 
 [contributing-main]: ../../Contributing.md
 [contributing-workflow]: ./Development%20Workflow.md
+[contributing-tools]: ../Our%20Tools.md
 [install-sdkman]: https://sdkman.io/install
 [install-nodejs]: https://nodejs.org/en/download
 [install-yarn]: https://classic.yarnpkg.com/en/docs/install
