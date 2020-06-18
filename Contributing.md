@@ -57,9 +57,8 @@ That depends on how you want to be involved!
 If you get stuck or need help, then just drop a message on [Slack][slack].
 
 [slack]: https://bts-website.slack.com
-[team-members]: https://github.com/backstage-technical-services
+[team-members]: https://github.com/orgs/backstage-technical-services/people
 [bts-staging]: https://staging.bts-crew.com
 [contributing-issues]: ./docs/contributing/Reporting%20Issues.md
 [contributing-wording]: ./docs/contributing/Wording%20Changes.md
 [contributing-developing]: ./docs/contributing/Developing.md
-

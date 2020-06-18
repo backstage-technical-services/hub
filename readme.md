@@ -46,4 +46,3 @@ See the separate [Contribution Guide][contribution-guide].
 [contribution-guide]: ./Contributing.md
 [contributing-issues]: ./docs/contributing/Reporting%20Issues.md
 [label-usage]: Use%20of%20Labels.md
-

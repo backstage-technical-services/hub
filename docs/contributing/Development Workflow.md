@@ -37,7 +37,7 @@ currently working on and avoids conflicts.
 
    > A ticket may not need refinement if this triage process determines
    > it to be sufficiently detailed; in which case it can progress
-   > straight to `Ready`, and the reviewer will unassign themselves.
+   > straight to `Ready`.
 
 2. **Refinement**
 
@@ -60,11 +60,11 @@ currently working on and avoids conflicts.
 
 4. **In Progress:** `status/in-progress`
 
-   When you start working on a ticket (see [below](#beginning-work)), mark it as "In
-   Progress" and assign yourself to it so everyone knows who's working
-   on it. It's important to communicate that you've picked up the ticket
-   and are open to working on it with others, as someone else may be
-   interested in working on it too.
+   When you start working on a ticket (see [below](#beginning-work)),
+   mark it as "In Progress" and assign yourself to it so everyone knows
+   who's working on it. It's important to communicate that you've picked
+   up the ticket and are open to working on it with others, as someone
+   else may be interested in working on it too.
 
    If at any point you can no longer continue with the ticket then mark
    is as "Ready", unassign yourself and post a comment of where you got
@@ -76,7 +76,7 @@ currently working on and avoids conflicts.
    Once the work on a ticket is completed it goes through 2 stages of
    review:
 
-   * **Code Review:** This is performed by another member of the team
+   * **Code Review:** This is performed by other members of the team
      when a Pull Request is opened. This simply checks that what you've
      done makes sense and follows good programming practices. This step
      uses CI/CD pipelines to check common issues, such as tests and,
@@ -84,13 +84,13 @@ currently working on and avoids conflicts.
    * **Quality Assurance (QA):** This is performed after the Pull
      Request is approved and merged and simply verifies that the work
      does resolve the ticket without adversely affecting the rest of the
-     site. For most tickets with a code coverage of tests, this is a
+     site. For most tickets with a good coverage of tests, this is a
      very quick check to ensure that the new code deploys successfully.
 
 6. **Released**
 
-    Once a ticket passes QA it is ready to be released! Anyone with
-    access to the CI/CD workflow can perform this process.
+   Once a ticket passes QA it is ready to be released! Anyone with
+   access to the CI/CD workflow can perform this process.
 
 ## Workflow
 
@@ -148,7 +148,7 @@ be `master`.
 
 It is very important that when you make a PR you enter a descriptive
 title and detailed description. At the very least, the title should
-include the ticket number and a brief summary of the work - make sure
+include the ticket number and a brief summary of the work, but make sure
 this title doesn't go over the character limit in GitHub.
 
 Writing a good PR description is a skill in and of itself, but the
@@ -171,16 +171,16 @@ Once you have opened a PR you should mark the ticket as "In Review".
 #### Reviewing a Pull Request
 
 Reviewing a PR should be a constructive process, and a learning
-opportunity for both the author and reviewer. Any comments you leave, as
-well as replies to other comments, must be constructive. If you feel
+opportunity for both the author and reviewers. Any comments you leave,
+as well as replies to other comments, must be constructive. If you feel
 strongly about a comment, it is often a good idea to chat to the other
-party directly in Slack and don't be afraid to use someone else as a
-mediator!
+party directly in Slack (either by text or call) and don't be afraid to
+use someone else as a mediator!
 
-If the reviewer has requested changes that you are happy to make, you
-can simply commit and push them to the same branch and they'll be picked
-up by the same PR. If you do any existing reviews will be marked as
-"stale", and you'll need to re-request a review from a member of the team.
+If the reviewer has requested changes you can simply commit and push
+them to the same branch and they'll be picked up by the PR. If you do,
+any existing reviews will be marked as "stale" so you'll need to
+re-request any reviews.
 
 #### Merging the Pull Request
 
@@ -197,9 +197,9 @@ good idea to include any details in the PR description in the commit
 message to help anyone looking at the git history understand what's
 going on.
 
-> We enforce squashing and merging for all repositories to ensure we
-> keep a linear git history and prevent `master` from containing any
-> merge commits as this make it hard to understand the history
+> We enforce squashing and merging for all repositories to prevent
+> `master` from containing any merge commits, as this makes it hard to
+> understand the history, and ensure that it is linear.
 
 #### Quality Assurance
 
@@ -240,3 +240,4 @@ housekeeping to do:
 [why-sign-commits]: https://mikegerwitz.com/2012/05/a-git-horror-story-repository-integrity-with-signed-commits
 [pr-autoclose-tickets]: https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue
 [staging]: https://staging.bts-crew.com
+

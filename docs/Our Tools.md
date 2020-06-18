@@ -18,7 +18,8 @@ like Facebook, or even emails.
 Slack is also the place where you can request access to any of the other
 tools listed in this document.
 
-Slack is open to everyone; you can get access by asking the Secretary.
+Slack is open to everyone; you can get access by [asking the
+Secretary][secretary].
 
 ### Channels
 
@@ -55,7 +56,8 @@ customise notifications for each channel, with separate rules for both
 desktop and mobile.
 
 The most common reason you might not know what's going on is if you have
-notifications off, or set to `Just mentions`.
+notifications off, or set to `Just mentions`. See [this
+guide][slack-notifications] for more information.
 
 ### Using mentions
 
@@ -71,7 +73,7 @@ Our Slack workspace has a few integrations installed to make everyone's
 lives slightly easier:
 
 * **GitHub:** This allows you to interact with GitHub issues and PRs
-  without needing to go to the website! It also posts notifications to
+  without needing to go to the website. It also posts notifications to
   the `service-github` channel.
 * **Google Drive:** This allows you to see previews of files and folders
   within Slack when a link is posted (as long as you have access to it).
@@ -117,12 +119,14 @@ organisation][github-team] if they wish to work on the website. See
 [Reporting Issues][contributing-issues] and
 [Developing][contributing-developing] respectively.
 
+If you want to develop on the site, make sure you have [set up an SSH
+key][github-ssh] and [sign your commits][github-sign].
+
 ### Tickets vs issues
 
-Within the team, we refer to issues in the issue tracker as "tickets";
-we feel this better explains what the issues represent (after all, not
-all tickets are actually issues - they may be requests or even
-questions).
+Within the team, we refer to issues in the issue tracker as "tickets" as
+we feel this better explains what the issues represent - after all, not
+all tickets are actually issues.
 
 ### Use of labels
 
@@ -181,7 +185,7 @@ want to view.
 
 ## SonarCloud
 
-[SonarCloud][sonarcloud] is a code quality analysis code that can be
+[SonarCloud][sonarcloud] is a code quality analysis tool that can be
 used to ensure all of your code is clean, and can even detect bugs and
 "code smells" (code that is indicative of logic errors that may lead to
 bugs in future).
@@ -246,11 +250,15 @@ the person using the link is the intended recipient.
 You do not need an account to use this tool.
 
 [slack]: https://bts-website.slack.com
+[slack-notifications]: https://slack.com/intl/en-gb/help/articles/201355156-Guide-to-desktop-notifications
+[secretary]: mailto:sec@bts-crew.com?subject=Slack%20access
 [git-handbook]: https://guides.github.com/introduction/git-handbook/
 [github]: https://github.com/backstage-technical-services
 [github-register]: https://github.com/join
 [github-issues]: https://github.com/backstage-technical-services/hub/issues
 [github-team]: https://github.com/orgs/backstage-technical-services/people
+[github-ssh]: https://help.github.com/en/enterprise/2.17/user/github/authenticating-to-github/connecting-to-github-with-ssh
+[github-sign]: https://help.github.com/en/github/authenticating-to-github/signing-commits
 [label-usage]: ../Use%20of%20Labels.md
 [zenhub-board]: https://app.zenhub.com/workspaces/website-5ee3b9f45f28495afe8be3f9/board
 [zenhub-extension]: https://www.zenhub.com/extension
@@ -262,3 +270,4 @@ You do not need an account to use this tool.
 [contributing-workflow]: ./contributing/Development%20Workflow.md
 [onetimesecret]: https://onetimesecret.com
 [keycloak]: https://keycloak.bts-crew.com
+

@@ -74,7 +74,7 @@ up on your computer.
    help with any testing and to backup or restore data. Fortunately,
    JetBrains also make an IDE for this - [DataGrip][intellij-datagrip].
 
-5. jq (a tool used for JSON processing)
+5. **jq** (a tool used for JSON processing)
 
    * On macOS, if you have [homebrew][homebrew] installed just run `brew
      install jq`
@@ -125,4 +125,3 @@ If you have any questions or need help don't hesitate to ask in
 [slack]: https://bts-website.slack.com
 [homebrew]: https://brew.sh
 [jq]: https://stedolan.github.io/jq
-

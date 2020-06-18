@@ -61,4 +61,3 @@ again.
 [slack]: https://bts-website.slack.com
 [secretary]: mailto:sec@bts-crew.com
 [triage]: ./Development%20Workflow.md#ticket-lifecycle
-
