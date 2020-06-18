@@ -1,11 +1,11 @@
-# Usage of Labels
+# Use of Labels
 
 It's easy to get lost in the sea of tickets in GitHub so using labels
 well is vital. We use both prefixes and colours to help organise our
 labels; pefixes indicate labels that relate to the same topic and
 colours group labels by a broad theme.
 
-Labels should only be applied to tickets, and not merge requests.
+Labels should only be applied to tickets, and not pull requests.
 
 ## Prefixes
 
@@ -15,8 +15,9 @@ Labels should only be applied to tickets, and not merge requests.
   ticket can only have one of these labels.
 * `type/` is used to indicate the type of ticket (eg, bug, feature,
   question, etc). A ticket can only have one of these labels.
-* `area/` is used to indicate which "area" of the website is affected. A
-  ticket can have as many of these as necessary.
+* `domain/` is used to indicate which "domain" (or area of similar
+  functionality) of the website is affected. A ticket can have as many
+  of these as necessary.
 * `platform/` is used to indicate which aspect (front or back end) of
   the site is affected. A ticket can have as many of these as necessary.
 
