@@ -219,6 +219,14 @@ automatically to resolve the issues, if it can.
 Sadly Snyk.io is not linked to the GitHub organisation, so access is
 limited. However, you can request access by asking in Slack.
 
+## Keycloak
+
+The API and SPA use [Keycloak][keycloak] for authentication and
+authorisation. You do not need to access Keycloak itself to be able to
+use the site, but until we have migrated our existing users over (which
+will happen when v5 nears released) you will need to ask for a user
+account to be created. You can do this in [Slack][slack].
+
 ## Sentry
 
 Sentry is a cloud-based error monitoring tool used to detect application
@@ -253,4 +261,4 @@ You do not need an account to use this tool.
 [contributing-developing]: ./contributing/Developing.md
 [contributing-workflow]: ./contributing/Development%20Workflow.md
 [onetimesecret]: https://onetimesecret.com
-
+[keycloak]: https://keycloak.bts-crew.com
