@@ -81,6 +81,33 @@ up on your computer.
    * On Linux, it's likely `jq` is available from your package manager
    * If all else fails, you can [download it][jq]
 
+6. Ensure you have an SSH key added to GitHub
+
+   > You can follow [this guide][ssh-create] to create an SSH key if you
+   > do not already have one, and [this guide][ssh-github] to add it to
+   > your GitHub account.
+
+7. Ensure you have a GPG key for signing commits
+   * Follow [this guide][gpg-create] to create a new GPG key. Make sure
+     it is RSA 4096.
+   * Follow [this guide][gpg-github] to add it to GitHub
+   * You can sign a commit by using the `-S` flag
+   * You can configure git sign all commits for the current repository
+     with
+
+     ```sh
+     $ git config commit.gpgsign true 
+     ```
+   * You can configure git to sign all commits for all repositories with
+
+     ```sh
+     $ git config --global commit.gpgsign true
+     ```
+
+8. Make sure you have an account in our nonprod
+   [Keycloak](../Our%20Tools.md#keycloak) realm. You can ask in Slack if
+   you're not sure.
+
 ## Getting started
 
 To make getting started easier, and to help ensure everyone is following
@@ -125,3 +152,8 @@ If you have any questions or need help don't hesitate to ask in
 [slack]: https://bts-website.slack.com
 [homebrew]: https://brew.sh
 [jq]: https://stedolan.github.io/jq
+[ssh-create]: https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+[ssh-github]: https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+[gpg-create]: https://docs.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key
+[gpg-github]: https://docs.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account
+

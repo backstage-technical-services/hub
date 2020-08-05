@@ -249,6 +249,19 @@ the person using the link is the intended recipient.
 
 You do not need an account to use this tool.
 
+## Google Drive
+
+We use [Google Drive][gdrive] for general admin, planning and storing
+documents, such as logos for the website. Anyone in the team can ask for
+access to the folder, and it is available to all committee members.
+
+## Postman
+
+[Postman][postman] is a piece of software used for API development, as
+it allows you to send requests and view the responses without needing to
+link it to a front-end. We currently store our collections in a
+[Google Drive](#google-drive) folder.
+
 [slack]: https://bts-website.slack.com
 [slack-notifications]: https://slack.com/intl/en-gb/help/articles/201355156-Guide-to-desktop-notifications
 [secretary]: mailto:sec@bts-crew.com?subject=Slack%20access
@@ -270,4 +283,6 @@ You do not need an account to use this tool.
 [contributing-workflow]: ./contributing/Development%20Workflow.md
 [onetimesecret]: https://onetimesecret.com
 [keycloak]: https://keycloak.bts-crew.com
+[gdrive]: https://drive.google.com/drive/folders/1YejLL2mTgzXfKU96bambQ6f3N1pLz9MQ
+[postman]: https://www.postman.com/downloads/
 
