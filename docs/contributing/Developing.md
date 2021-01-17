@@ -12,35 +12,12 @@
 Before you start developing, please make sure you have the following set
 up on your computer.
 
-> **Note:** While it is possible to use all of these tools and develop
-> both the API and SPA on Windows, it is strongly recommended that you
-> use a Linux VM or the Windows Subsystem for Linux in order to take
-> advantage of the tooling we use to simplify some processes.
+> **Note:** While it is possible to use all of these tools and work on
+> the website on Windows, it is strongly recommended that you use a
+> Linux VM or the Windows Subsystem for Linux in order to take advantage
+> of the tooling we use to simplify some processes.
 
-1. **SDKMAN**
-
-   SDKMAN is a useful utility that makes it easy to install and manage
-   Java SDKs. Follow [these instructions][install-sdkman] to install it.
-   You can then install an SDK with the following command:
-
-   ```sh
-   $ sdk install java <version>
-   ```
-
-   This will install the SDK to `~/.sdkman/candidates/java`.
-
-   You can search for available versions using `sdk search java` and set
-   your default java version using `sdk default java <version>`.
-
-2. **Node.js and Yarn**
-
-   Node.js is needed in order to use and run the SPA; you can install
-   the latest LTS (12.x) [here][install-nodejs].
-
-   You will also need to [install Yarn][install-yarn], which is an
-   improved version of npm, the node package manager.
-
-3. **Docker and Docker Compose**
+1. **Docker and Docker Compose**
 
    In order to run any auxiliary services (eg, the SMTP server and
    database) you will need to have [Docker installed][install-docker],
@@ -59,11 +36,10 @@ up on your computer.
    * [Docker Compose CLI][docker-docs-compose-cli]
    * [Docker Compose Files][docker-docs-compose-file]
 
-4. **IDEs**
+2. **IDEs**
 
    At the heart of good development is a good IDE (Integrated
-   Development Environment). There is a lot of choice for both the API
-   and SPA but the recommended IDEs are [IntelliJ IDEA][intellij-idea]
+   Development Environment). There is but the recommended IDEs are [IntelliJ IDEA][intellij-idea]
    and [Webstorm][intellij-webstorm] by JetBrains. Students are able to
    get their entire suite for free if you provide proof of registration.
 
@@ -74,20 +50,20 @@ up on your computer.
    help with any testing and to backup or restore data. Fortunately,
    JetBrains also make an IDE for this - [DataGrip][intellij-datagrip].
 
-5. **jq** (a tool used for JSON processing)
+3. **jq** (a tool used for JSON processing)
 
    * On macOS, if you have [homebrew][homebrew] installed just run `brew
      install jq`
    * On Linux, it's likely `jq` is available from your package manager
    * If all else fails, you can [download it][jq]
 
-6. Ensure you have an SSH key added to GitHub
+4.  Ensure you have an SSH key added to GitHub
 
    > You can follow [this guide][ssh-create] to create an SSH key if you
    > do not already have one, and [this guide][ssh-github] to add it to
    > your GitHub account.
 
-7. Ensure you have a GPG key for signing commits
+5. Ensure you have a GPG key for signing commits
    * Follow [this guide][gpg-create] to create a new GPG key. Make sure
      it is RSA 4096.
    * Follow [this guide][gpg-github] to add it to GitHub
@@ -104,9 +80,12 @@ up on your computer.
      $ git config --global commit.gpgsign true
      ```
 
-8. Make sure you have an account in our nonprod
-   [Keycloak](../Our%20Tools.md#keycloak) realm. You can ask in Slack if
-   you're not sure.
+<!--6. Make sure you have an account in our nonprod-->
+<!--   [Keycloak](../Our%20Tools.md#keycloak) realm. You can ask in Slack if-->
+<!--   you're not sure.-->
+
+> **Note:** Each individual repository will also contain the necessary
+> pre-requisites specific to that repository.
 
 ## Getting started
 
@@ -121,7 +100,7 @@ $ git clone git@github.com:backstage-technical-services/website-development.git 
 ```
 
 The [included readme][development-readme] will contain any more
-information on how to get the API and SPA downloaded and set up.
+information on how to get the rest of the website downloaded and set up.
 
 ## Questions or need help?
 
