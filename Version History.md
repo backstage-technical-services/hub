@@ -1,5 +1,7 @@
 # Version History
 
+**Current version:** [v4.x](#4x)
+
 ### 2.x
 
 Version 2 was built by Colin Paxton and later maintained by Lee Stone.
@@ -17,7 +19,7 @@ would introduce several new features.
 ### 4.x
 
 Due to its age Version 2 made use of numerous outdated or deprecated
-features and the process of continuous improvement had produced a file
+features, and the process of continuous improvement had produced a file
 structure that was very difficult to manage and keep updated. The site
 also mixed HTML and PHP making updating the style difficult.
 
@@ -30,8 +32,8 @@ Version 4 also led the move of the server to a VPS, full use of the
 Backstage domain ([bts-crew.com][domain]) and the use of git and GitHub to
 manage version control.
 
-This development is led by [Ben Jones][github-bnjns] and is built on PHP 7,
-MySQL 5.6 and Laravel 6.0 and utilises Bootstrap 3.
+This development is led by [Ben Jones][github-bnjns] and is built on PHP
+7, MySQL 5.6 and Laravel and utilises Bootstrap 3.
 
 ### 5.x
 
@@ -55,6 +57,9 @@ and uses the Vue.js framework, using Bootstrap 4.
 
 Version 5 also uses of Docker images for to simplify the deployment
 process, and will likely move hosting to Bath SU on-premises servers.
+
+**Note:** We aim to move to v5 in the long term; for now we will still
+be developing on v4.
 
 [domain]: https://www.bts-crew.com
 [github-bnjns]: https://github.com/bnjns

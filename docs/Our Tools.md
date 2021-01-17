@@ -44,6 +44,8 @@ Some other potentially useful channels are:
   the website.
 * `ops-security`: This is where we talk about anything security related.
   [Snyk](#snyk) also posts notifications of vulnerabilities here.
+* `service-ci`: This is where CircleCI will post any notifications about
+  any CI workflows (eg, if a workflow fails).
 * `service-github`: This is where important notifications from GitHub
   are posted, including new Pull Requests.
 * `service-rss`: This is where any potentially interesting news in the
@@ -78,18 +80,12 @@ lives slightly easier:
 * **Google Drive:** This allows you to see previews of files and folders
   within Slack when a link is posted (as long as you have access to it).
   You can even find and create files right from within Slack.
-* **Google Hangouts:** We use Google Meet (aka Hangouts) for our
-  meetings; using this integration you can create a meet from within
-  Slack.
 * **Giphy:** For those times when an animated GIF perfectly sums up your
   reaction to something.
 * **Bugsnag:** Bugsnag is the application that monitors v4 of the
   website, and instantly reports in Slack when an error occurs so that
   we know that a problem's occurred even before the user can report the
   issue in GitHub.
-
-  > This integration is being deprecated as it is not supported by
-  > Quarkus. v5 of the website will use Sentry.io instead.
 
 As we are on the free plan we can only add a limited number of
 integrations, however if there's something that you think would be
@@ -164,8 +160,8 @@ what the different columns mean.
 ## CircleCI
 
 GitHub Actions is sadly a little limited for some of the complex CI/CD
-workflows needed by the API and SPA. Until it has matured, these two
-repositories use [CircleCI][circleci], a leader in the world of CI/CD.
+workflows needed by the site. Until it has matured, we use
+[CircleCI][circleci], a leader in the world of CI/CD.
 
 As our repositories are Open-Source Software (OSS), CircleCI grants us a
 very large number of credits to use for builds. However, some builds can
@@ -223,21 +219,21 @@ automatically to resolve the issues, if it can.
 Sadly Snyk.io is not linked to the GitHub organisation, so access is
 limited. However, you can request access by asking in Slack.
 
-## Keycloak
+<!--## Keycloak-->
 
-The API and SPA use [Keycloak][keycloak] for authentication and
-authorisation. You do not need to access Keycloak itself to be able to
-use the site, but until we have migrated our existing users over (which
-will happen when v5 nears released) you will need to ask for a user
-account to be created. You can do this in [Slack][slack].
+<!--The API and SPA use [Keycloak][keycloak] for authentication and-->
+<!--authorisation. You do not need to access Keycloak itself to be able to-->
+<!--use the site, but until we have migrated our existing users over (which-->
+<!--will happen when v5 nears released) you will need to ask for a user-->
+<!--account to be created. You can do this in [Slack][slack].-->
 
-## Sentry
+<!--## Sentry-->
 
-Sentry is a cloud-based error monitoring tool used to detect application
-errors in real-time, allowing you to react to issues without needing
-users to report bugs in GitHub.
+<!--Sentry is a cloud-based error monitoring tool used to detect application-->
+<!--errors in real-time, allowing you to react to issues without needing-->
+<!--users to report bugs in GitHub.-->
 
-We haven't yet set up Sentry, but it will be integrated into the API.
+<!--We haven't yet set up Sentry, but it will be integrated into the API.-->
 
 ## One-Time Secret
 
@@ -255,12 +251,12 @@ We use [Google Drive][gdrive] for general admin, planning and storing
 documents, such as logos for the website. Anyone in the team can ask for
 access to the folder, and it is available to all committee members.
 
-## Postman
+<!--## Postman-->
 
-[Postman][postman] is a piece of software used for API development, as
-it allows you to send requests and view the responses without needing to
-link it to a front-end. We currently store our collections in a
-[Google Drive](#google-drive) folder.
+<!--[Postman][postman] is a piece of software used for API development, as-->
+<!--it allows you to send requests and view the responses without needing to-->
+<!--link it to a front-end. We currently store our collections in a-->
+<!--[Google Drive](#google-drive) folder.-->
 
 [slack]: https://bts-website.slack.com
 [slack-notifications]: https://slack.com/intl/en-gb/help/articles/201355156-Guide-to-desktop-notifications

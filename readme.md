@@ -3,9 +3,9 @@
 The Hub is the go-to place for any information about the website of
 Backstage Technical Services.
 
-As we are moving to an API and SPA, it made sense to move issues and
-documentation out of the Laravel site's repository and into a central
-area.
+As we are moving to an API and SPA in the long term, it made sense to
+move issues and documentation out of the Laravel site's repository and
+into a central area.
 
 **Useful Links**
 
