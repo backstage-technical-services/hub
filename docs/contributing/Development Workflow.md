@@ -99,7 +99,7 @@ currently working on and avoids conflicts.
 When you pick a ticket and mark it as "In Progress", you can start
 working on it locally.
 
-All work should be performed on its own branch, based on `master`. The
+All work should be performed on its own branch, based on `main`. The
 name of this branch should be all lowercase, use hypens instead of
 spaces and include the ticket number and a short summary of the work in
 the following format:
@@ -136,7 +136,7 @@ commit messages][commit-message-guide] for more information.
 
 ### Releasing your work
 
-Your work is released to the world by merging it into the `master`
+Your work is released to the world by merging it into the `main`
 branch using a Pull Request (PR).
 
 #### Creating a Pull Request (PR)
@@ -144,7 +144,7 @@ branch using a Pull Request (PR).
 Once the ticket is complete, ensure you have pushed it all and then
 navigate to the repository and click `Pull requests > New pull request`.
 The `compare` branch should be your branch, and the `base` branch should
-be `master`.
+be `main`.
 
 It is very important that when you make a PR you enter a descriptive
 title and detailed description. At the very least, the title should
@@ -187,7 +187,7 @@ re-request any reviews.
 Once a PR is approved and all of the CI/CD checks have passed you can
 merge the PR simply by pressing the "Squash and merge" button.
 
-> **Tip:** GitHub scans the contents of commits merged into `master` and
+> **Tip:** GitHub scans the contents of commits merged into `main` and
 > if the commit contains a [recognised keyword][pr-autoclose-tickets]
 > GitHub will automatically close the ticket for you.
 
@@ -198,7 +198,7 @@ message to help anyone looking at the git history understand what's
 going on.
 
 > We enforce squashing and merging for all repositories to prevent
-> `master` from containing any merge commits, as this makes it hard to
+> `main` from containing any merge commits, as this makes it hard to
 > understand the history, and ensure that it is linear.
 
 #### Quality Assurance

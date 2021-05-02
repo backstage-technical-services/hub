@@ -124,7 +124,7 @@ If you have any questions or need help don't hesitate to ask in
 [docker-container-run]: https://docs.docker.com/engine/reference/commandline/container_run
 [docker-images-vs-containers]: https://stackoverflow.com/a/23736802
 [development-repo]: https://github.com/backstage-technical-services/website-development
-[development-readme]: https://github.com/backstage-technical-services/website-development/blob/master/readme.md
+[development-readme]: https://github.com/backstage-technical-services/website-development/blob/main/readme.md
 [slack]: https://bts-website.slack.com
 [homebrew]: https://brew.sh
 [jq]: https://stedolan.github.io/jq

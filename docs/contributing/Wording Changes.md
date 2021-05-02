@@ -23,7 +23,7 @@ this method will be rejected as they won't have been tested.
   Use the commit dialogue at the bottom of the page to save your
   changes. If you wish to make more changes to other files then select
   the `Create a new branch` option; otherwise you can select `Commit
-  directly to the master branch`.
+  directly to the main branch`.
 
 * **Create a pull request**
 

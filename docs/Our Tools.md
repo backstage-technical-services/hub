@@ -166,7 +166,7 @@ workflows needed by the site. Until it has matured, we use
 As our repositories are Open-Source Software (OSS), CircleCI grants us a
 very large number of credits to use for builds. However, some builds can
 take a long time so we only trigger them for Pull Requests and commits
-on `master`. As a result, you should only open a Pull Request when the
+on `main`. As a result, you should only open a Pull Request when the
 work is ready to be reviewed.
 
 Sensitive information, such as API tokens and auth credentials, are
@@ -187,7 +187,7 @@ used to ensure all of your code is clean, and can even detect bugs and
 bugs in future).
 
 SonarCloud is a required CI step for all Pull Requests and builds on
-`master`, with some checks that have to pass in order for the code to be
+`main`, with some checks that have to pass in order for the code to be
 considered healthy:
 
 * Test coverage > 70%
