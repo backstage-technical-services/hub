@@ -1,7 +1,5 @@
-daysUntilStale: 60
+daysUntilStale: 30
 daysUntilClose: 14
-onlyLabels:
-  - status/triage
 exemptLabels:
   - keep-open
   - urgent
